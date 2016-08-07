@@ -1,0 +1,33 @@
+<%= form_for(@task, html: {class: 'form-horizontal' }) do |t| %>
+
+<div class="field form-group">
+    <%= t.label '标题', class: 'col-sm-2 control-label' %>
+    <div class="col-sm-6">
+        <%= t.text_field :title, class: "form-control", placeholder: "输入标题，不为空" %>
+    </div>
+</div>
+<div class="field form-group">
+    <%= t.label '事项', class: "col-sm-2 control-label" %>
+    <div class="col-sm-6">
+        <%= t.text_area :note, class: "form-control", placeholder: "输入事项，不为空" %>
+    </div>
+</div>
+<div class="field form-group">
+    <%= t.label '完成时间', class: "col-sm-2 control-label" %>
+    <div class="col-sm-6">
+        <%= t.date_field :completed, class: "input-group date" %>
+    </div>
+</div>
+<div class="field form-group">
+    <%= t.label '分类', class: "col-sm-2 control-label" %>
+    <div class="col-sm-6">
+        <%= t.select(:status, ['学习', '生活', '工作']) %>
+    </div>
+</div>
+<div class="actions form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+        <%= t.submit yield(:button),:class => "btn btn-success btn-sm" %>&nbsp&nbsp
+        <%= link_to '返回', root_path, class: "btn btn-info btn-sm" %>
+    </div>
+</div>
+<% end %>

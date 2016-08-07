@@ -1,0 +1,38 @@
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Notes
+        </th>
+        <th>
+            Creates on
+        </th>
+        <th>
+            Completed
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <strong><%= @task.title %></strong>
+        </th>
+        <th>
+            <%= @task.note %>
+        </th>
+        <th><%= @task.created_at.strftime('%F') %></th>
+        <th><%= @task.completed %></th>
+        <th><%= @task.status %></th>
+        <th>
+            <%= link_to "删除", task_path(@task), method: :delete , data: {confirm: "Are you sure you want to delete task #{@task.title}?"}, class: 'btn btn-danger btn-xs' %>
+            <%= link_to "修改", edit_task_path(@task), class: 'btn btn-info btn-xs' %>
+            <%= link_to "返回", root_path, class: 'btn btn-default btn-xs'%>
+        </th>
+    </tr>
+</table>
