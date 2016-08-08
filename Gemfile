@@ -44,6 +44,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'mysql2'
+  gem 'mailcatcher'
 end
 
 group :production do
@@ -51,7 +52,6 @@ group :production do
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'mailcatcher'
 gem "rack-protection", :github => "sinatra/rack-protection"
 gem 'sinatra', github: 'sinatra'
 gem 'devise'
