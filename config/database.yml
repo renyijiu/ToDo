@@ -6,6 +6,9 @@ development:
   password: "lanyuejin"
   encoding: utf8
 
+production:
+  adapter: postgresql
+  encoding: unicode
 # # SQLite version 3.x
 # #   gem install sqlite3
 # #
