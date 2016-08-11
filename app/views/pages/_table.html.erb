@@ -1,9 +1,9 @@
-<% if @tasks.empty? %>
-<span class="bg-info">
-    暂时没有待做事项！
-</span>
-<% else %>
 <table class="table" id="home_table">
+  <% if @tasks.empty? %>
+  <span class="bg-info">
+      暂时没有待做事项！
+  </span>
+  <% else %>
     <tr>
         <th>
             Title
@@ -48,5 +48,5 @@
         </th>
     </tr>
     <% end %>
+    <% end %>
 </table>
-<% end %>

@@ -3,7 +3,7 @@ development:
   database: todo
   host: localhost
   username: root
-  password: ""
+  password: "lanyuejin"
   encoding: utf8
 
 production:
