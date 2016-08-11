@@ -12,8 +12,8 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       flash[:danger] = '邮箱或者密码不正确'
-      flash.clear
       render 'new'
+      flash.clear
     end
   end
 
