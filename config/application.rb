@@ -13,3 +13,4 @@ module Todo
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+CATEGORY = ['学习', '生活', '工作', '琐事']

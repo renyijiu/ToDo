@@ -1,6 +1,6 @@
 <% if @tasks.empty? %>
 <span class="bg-info">
-    对不起，没有待做事项！
+    暂时没有待做事项！
 </span>
 <% else %>
 <table class="table" id="home_table">
@@ -9,13 +9,13 @@
             Title
         </th>
         <th>
-            Notes
+            Note
         </th>
         <th>
-            Create
+            Start
         </th>
         <th>
-            Completed
+            Deadline
         </th>
         <th>
             Category
@@ -43,7 +43,7 @@
         </th>
         <th>
             <%= link_to "", { :controller => 'tasks', :action => 'check', :id => task }, class: 'glyphicon glyphicon-ok', id: 'check_button', remote: true %>&nbsp&nbsp&nbsp&nbsp
-            <%= link_to "", task_path(task), method: :delete , data: {confirm: "确定删除？"}, class: "glyphicon glyphicon-remove", remote: true %>&nbsp&nbsp&nbsp&nbsp
+            <%= link_to "", task_path(task), method: :delete , class: "glyphicon glyphicon-remove", remote: true %>&nbsp&nbsp&nbsp&nbsp
             <%= link_to "", edit_task_path(task), class: 'glyphicon glyphicon-pencil', id: 'edit_button' %>
         </th>
     </tr>

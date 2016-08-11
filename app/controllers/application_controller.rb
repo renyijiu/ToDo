@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     else
       flash[:danger] = "请登录！"
       redirect_to login_path
+      flash.clear
     end
   end
 
