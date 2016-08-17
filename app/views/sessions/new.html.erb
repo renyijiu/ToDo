@@ -3,9 +3,9 @@
 <form class="form-horizontal" method="post">
     <%= form_for(:session, url: login_path) do |f| %>
     <div class="form-group">
-        <%= f.label :email, class: 'col-sm-2 control-label' %>
+        <%= f.label :username, class: 'col-sm-2 control-label' %>
         <div class="col-sm-6">
-            <%= f.email_field :email, class: 'form-control', placeholder: '请输入邮箱' %>
+            <%= f.text_field :username, class: 'form-control', placeholder: '请输入邮箱或者用户名，不包含空格' %>
         </div>
     </div>
 

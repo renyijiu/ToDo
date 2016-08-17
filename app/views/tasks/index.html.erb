@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <h1>To Do</h1>
+    </head>
+
+    <body>
+      <div class="modal fade" id="task_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      </div>
+      <%= render 'table' %>
+
+    </body><br/>
+    <p>
+      <%= link_to '新任务', new_task_path, class: 'btn btn-success btn-xs', remote: true %>
+    </p>
+</html>

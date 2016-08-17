@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'pages#index'
+  root to: 'tasks#index'
   get 'tasks/check', to: 'tasks#check'
   resources :tasks, except: [:index]
 

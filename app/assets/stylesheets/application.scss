@@ -23,25 +23,41 @@ body {
 }
 #home_table {
     background-color: #f0ffff;
+    .no_show {
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
     th {
         text-align: center;
     }
 }
-#check_button {
+.hidden_picture {
+    width: 50%;
+    height: 50%;
+    clear: both;
+    display: block;
+    margin: auto;
+}
+.glyphicon-ok {
     color: #AAA;
 }
-#edit_button {
+.glyphicon-pencil {
     color: #1A9909;
+    text-indent: 1em;
+}
+.glyphicon-remove {
+    text-indent: 1em;
 }
 .checked {
     .checked_th {
         color: #AAA;
         text-decoration: line-through;
     }
-    #check_button {
+    .glyphicon-ok {
         color: #1A9909;
     }
-    #edit_button {
+    .glyphicon-pencil {
         pointer-events: none;
         color: #AAA;
     }

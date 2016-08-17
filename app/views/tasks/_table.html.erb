@@ -1,0 +1,41 @@
+<table class="table" id="home_table">
+  <% if @tasks.empty? %>
+    <p class=<%='no_show' if !@tasks.empty? %>>
+        暂时没有待办事项！
+    </p>
+  <% else %>
+    <tr>
+        <th>Title</th>
+        <th>Notes</th>
+        <th>Create</th>
+        <th>Completed</th>
+        <th>Category</th>
+        <th>Action</th>
+    </tr>
+
+    <% @tasks.each do |task| %>
+    <tr class=<%='checked' if task.checked %>>
+        <th class='checked_th'>
+            <%= task.title %>
+        </th>
+        <th class='checked_th'>
+            <%= task.note %>
+        </th>
+        <th class='checked_th'>
+            <%= task.created_at.strftime('%F') %>
+        </th>
+        <th class='checked_th'>
+            <%= task.completed %>
+        </th>
+        <th class='checked_th'>
+            <%= task.status %>
+        </th>
+        <th>
+            <%= link_to "", { :controller => 'tasks', :action => 'check', :id => task }, class: 'glyphicon glyphicon-ok', remote: true %>
+            <%= link_to "", task_path(task), method: :delete , class: "glyphicon glyphicon-remove", remote: true %>
+            <%= link_to "", edit_task_path(task), class: 'glyphicon glyphicon-pencil', remote: true %>
+        </th>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
